@@ -7,9 +7,9 @@ const client = new Discord.Client();
 async function play(voiceChannel, videoName) {
   const connection = await connect(voiceChannel);
   if (videoName === 'mario' || videoName === 'pron') {
-    const dispatcher = connection.play(videoName + '.mp3', { volume: 0.5 });
+    const dispatcher = connection.play('songs/' + videoName + '.mp3', { volume: 0.5 });
   } else {
-    const dispatcher = connection.play(videoName + '.mp3');
+    const dispatcher = connection.play('songs/' + videoName + '.mp3');
   }
 }
 
