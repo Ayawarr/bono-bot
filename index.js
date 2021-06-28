@@ -60,7 +60,7 @@ client.on('message', message => {
   }
 });
 
-// Ecoute les déconnections
+// Ecoute les déconnexions
 client.on('voiceStateUpdate', (oldState, newState) => {
   const newUserChannelID = newState.channelID;
   const oldUserChannelID = oldState.channelID;
