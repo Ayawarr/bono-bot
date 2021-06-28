@@ -53,7 +53,8 @@ client.on('message', message => {
     .addField('!moi', 'C\'est qui l\'patron ?')
     .addField('!sensible', 'Tu touches à ma sensibilité.')
     .addField('!mario', 'Mamma mia !')
-    .addField('!pron', 'Seulement pour les adultes. 🔞');
+    .addField('!pron', 'Seulement pour les adultes. 🔞')
+    .addField('!salut', 'Johnny...');
     message.channel.send(commandsMessage);
     message.delete();
   }
