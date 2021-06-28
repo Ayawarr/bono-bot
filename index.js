@@ -64,7 +64,7 @@ client.on('message', message => {
 client.on('voiceStateUpdate', (oldState, newState) => {
   const newUserChannelID = newState.channelID;
   const oldUserChannelID = oldState.channelID;
-  if (newUserChannelID === null) {
+  if (newUserChannelID === null && oldState.member.user.id !== '859066704746905610') {
     const oldUserChannel = client.channels.fetch(oldUserChannelID);
     oldUserChannel.then((value) => {
       play(value, 'salut');
