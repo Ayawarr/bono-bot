@@ -29,7 +29,8 @@ client.on('message', message => {
     message.content === '!moi' ||
     message.content === '!sensible' ||
     message.content === '!mario' ||
-    message.content === '!pron'
+    message.content === '!pron' ||
+    message.content === '!salut'
   ) {
     if (message.member.voice.channel) {
       play(message.member.voice.channel, message.content.substr(1));
