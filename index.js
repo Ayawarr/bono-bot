@@ -18,6 +18,7 @@ async function connect(channelName) {
   return channelName.join();
 }
 
+// Ecoute les messages postés
 client.on('message', message => {
 	if (
     message.content === '!borgir' ||
@@ -54,6 +55,19 @@ client.on('message', message => {
     .addField('!pron', 'Seulement pour les adultes. 🔞');
     message.channel.send(commandsMessage);
     message.delete();
+  }
+});
+
+// Ecoute les déconnections
+client.on('voiceStateUpdate', (oldState, newState) => {
+  const newUserChannelID = newState.channelID;
+  const oldUserChannelID = oldState.channelID;
+  if (newUserChannelID === null) {
+    const oldUserChannel = client.channels.fetch(oldUserChannelID);
+    oldUserChannel.then((value) => {
+      play(value, 'salut');
+    });
+    console.log('Salut mon pote ' + oldState.member.nickname + '.');
   }
 });
 
