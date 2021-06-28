@@ -30,7 +30,8 @@ client.on('message', message => {
     message.content === '!sensible' ||
     message.content === '!mario' ||
     message.content === '!pron' ||
-    message.content === '!salut'
+    message.content === '!salut' ||
+    message.content === '!oof'
   ) {
     if (message.member.voice.channel) {
       play(message.member.voice.channel, message.content.substr(1));
@@ -54,7 +55,8 @@ client.on('message', message => {
     .addField('!sensible', 'Tu touches à ma sensibilité.')
     .addField('!mario', 'Mamma mia !')
     .addField('!pron', 'Seulement pour les adultes. 🔞')
-    .addField('!salut', 'Johnny...');
+    .addField('!salut', 'Johnny...')
+    .addField('!oof', 'Un son de mort rigolo pour petits et grands.');
     message.channel.send(commandsMessage);
     message.delete();
   }
