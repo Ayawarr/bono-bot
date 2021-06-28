@@ -42,7 +42,7 @@ client.on('message', message => {
     .setTitle('Commandes 🐒')
     .setColor('#744400')
     .setDescription('Liste des commandes du bono-bot.')
-    .setFooter('"Ouhaha" - bono-bot')
+    .setFooter('Dépôt git : https://github.com/arthur-michel/bono-bot')
     .addField('!borgir', 'Borgir ! 🍔')
     .addField('!fatigue', 'C\'est pas qu\'j\'en ai marre mais...')
     .addField('!ntm', 'Euh...')
